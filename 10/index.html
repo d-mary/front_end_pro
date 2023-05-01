@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures</title>
+    <script>
+      // Написати функцію, яка приймає 1 параметр. з тим, що передали перший раз і т. д. Все це із замиканнями, наприклад:
+      // sum(3) = 3
+      // sum(5) = 8
+      // sum(20) = 28
+      function createSum() {
+        let sum = 0;
+        return function (number) {
+          return sum + number;
+        };
+      }
+      const sum = createSum();
+      console.log(sum(3));
+      console.log(sum(5));
+      console.log(sum(10));
+      console.log(sum(15));
+    </script>
+  </head>
+  <body></body>
+</html>

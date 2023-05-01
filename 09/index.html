@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 8</title>
+    <script>
+      // task 1
+      const array = [1, 2, 3, 4, 5, 6, 7];
+      removeElement(array, 5);
+      console.log(array);
+      function removeElement(array, element) {
+        for (let number of array) {
+          if (element === number) {
+            return array.splice(array.indexOf(element), 1);
+          }
+        }
+      }
+      //  task 2
+      const arrayWithDifferentValues = ["hi", 24, 54, "hello", ""];
+      function calcAverageNumbers(array) {
+        let sum = 0;
+        let quantityNumbers = 0;
+        let result = 0;
+        for (let element of array) {
+          if (typeof element === "number" && !isNaN(element)) {
+            sum += element;
+            quantityNumbers++;
+            result = sum / quantityNumbers;
+          }
+        }
+        return result;
+      }
+
+      console.log(calcAverageNumbers(arrayWithDifferentValues));
+      // task 3
+      let str = prompt("Insert your string");
+      let chars = [];
+      chars.push(prompt("Insert your first char"));
+      chars.push(prompt("Insert your second char"));
+
+      function deleteChars(str) {
+        let result = "";
+        for (let i = 0; i < str.length; i++) {
+          if (!chars.includes(str[i])) {
+            result += str[i];
+          }
+        }
+        return result;
+      }
+
+      console.log(deleteChars(str));
+    </script>
+  </head>
+  <body></body>
+</html>

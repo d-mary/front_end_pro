@@ -36,11 +36,9 @@
       console.log(calcAverageNumbers(arrayWithDifferentValues));
       // task 3
       let str = prompt("Insert your string");
-      let chars = [];
-      chars.push(prompt("Insert your first char"));
-      chars.push(prompt("Insert your second char"));
 
-      function deleteChars(str) {
+      function deleteChars(str, chars) {
+        let chars = getChars();
         let result = "";
         for (let i = 0; i < str.length; i++) {
           if (!chars.includes(str[i])) {
@@ -49,7 +47,12 @@
         }
         return result;
       }
-
+      function getChars() {
+        let chars = [];
+        chars.push(prompt("Insert your first char"));
+        chars.push(prompt("Insert your second char"));
+        return chars;
+      }
       console.log(deleteChars(str));
     </script>
   </head>

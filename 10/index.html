@@ -13,7 +13,8 @@
       function createSum() {
         let sum = 0;
         return function (number) {
-          return sum + number;
+          sum += number;
+          return sum;
         };
       }
       const sum = createSum();

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion</title>
+    <script>
+      const number = new UserNumber();
+      console.log(number);
+      console.log("pow", number.pow());
+
+      function UserNumber(numb = +prompt("Input number", 5)) {
+        this.numb = numb;
+        this.check = this.numb >= 0;
+        this.pow = function (
+          degree = +prompt("Input degree", 2),
+          numb = this.numb
+        ) {
+          if (this.check === false) return "error";
+          if (degree === 1) {
+            return numb;
+          } else if (degree === 0) {
+            return 1;
+          } else if (degree >= 1) {
+            return numb * this.pow(--degree);
+          } else {
+            return (1 / numb) * this.pow(++degree);
+          }
+        };
+      }
+      // console.log(pow(5, -2));
+      // function pow(numb, degree) {
+      //   if (degree === 1) {
+      //     return numb;
+      //   } else if (degree === 0) {
+      //     return 1;
+      //   } else if (degree >= 1) {
+      //     return numb * pow(numb, --degree);
+      //   } else {
+      //     return (1 / numb) * pow(numb, ++degree);
+      //   }
+      // }
+    </script>
+  </head>
+  <body></body>
+</html>

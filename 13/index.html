@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <img src="" alt="picture" class="image" width="300px" height="400px" />;
+  </body>
+  <script>
+    let img = document.querySelector(".image");
+    getRandomImage();
+    function getRandom(min, max) {
+      let randNumber = Math.round(min - 0.5 + Math.random() * (max - min + 1));
+      return randNumber;
+    }
+
+    function getRandomImage() {
+      randNumber = getRandom(1, 9);
+      console.log(randNumber);
+      return (img.src = "images/" + randNumber + ".jpg");
+    }
+
+    // switch (randNumber) {
+    //   case 1:
+    //     img.src = "images/1.jpg";
+    //     break;
+    //   case 2:
+    //     img.src = "images/2.jpg";
+    //     break;
+    //   case 3:
+    //     img.src = "images/3.jpg";
+    //     break;
+    //   case 4:
+    //     img.src = "images/4.jpg";
+    //     break;
+    //   case 5:
+    //     img.src = "images/5.jpg";
+    //     break;
+    //   case 6:
+    //     img.src = "images/6.jpg";
+    //     break;
+    //   case 7:
+    //     img.src = "images/7.jpg";
+    //     break;
+    //   case 8:
+    //     img.src = "images/8.jpg";
+    //     break;
+    //   case 9:
+    //     img.src = "images/9.jpg";
+    //     break;
+    // }
+  </script>
+</html>

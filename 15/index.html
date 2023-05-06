@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate list</title>
+  </head>
+  <body>
+    
+  <script>
+
+    const array = [1, 2, 3, [1.1, 1.2, 1.3, 1.4], 4, 5, , [1.1, 1.2], 6];
+
+    const list = generateList(array);
+    document.body.appendChild(list);
+
+    function generateList (array) {
+      const ul = document.createElement("ul");
+      array.forEach(element => {
+        const li = document.createElement("li");
+        if (Array.isArray(element)) {
+          li.appendChild(generateList(element));
+          } else {
+          li.textContent = element;
+        }
+        ul.appendChild(li);
+      });
+      
+      return ul; 
+    }
+
+  </script>
+</html>

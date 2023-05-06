@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Follow the link</title>
+  </head>
+  <body>
+    <button class="js--btnMain">This page</button>
+    <button class="js--btnRedirect">Redirect</button>
+  <script>
+      let _btnMain = document.querySelector(".js--btnMain");
+      let _btnRedirect = document.querySelector(".js--btnRedirect");
+      let link = "";
+
+      
+      _btnRedirect.addEventListener('click', function () {
+        getLink();
+        redirectToLink(link);
+      })
+
+      _btnMain.addEventListener('click', function () {
+        redirectToThisPage();
+      })
+      
+      function getLink () {
+        while (link.trim() === '') {
+          link = prompt("Enter link", "learn.javascript.ru/");
+            if (link === null) { 
+              return;
+            }
+        }
+      }
+
+      function checkProtocol (link) {
+        if (!link.startsWith("http://") && !link.startsWith("https://")){
+          link = "https://" + link;
+        } else {
+          return link
+        } 
+        return link
+      }
+
+      
+      function redirectToLink (link) {
+        link = checkProtocol(link);
+        window.location.href = link;
+      }
+  
+      function redirectToThisPage () {
+        window.location.href = "#";
+      }
+
+    
+  </script>
+</html>

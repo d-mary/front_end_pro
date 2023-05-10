@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    font-size: 20px;
+    background-color: #000000d8;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0 15px 0;
+    color: white;
+ 
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.form {
+
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+.form__input {
+    min-height: 25px;
+    padding: 20px;
+    width: 70%;
+    border: 1px solid;
+    border-radius:50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+input {
+    outline: none;
+}
+
+.form__btn {
+    background: rgb(17, 17, 233);
+    border: none;
+    cursor: pointer;
+    width: 160px;
+    padding: 20px;
+    border-radius:50px;
+    color:white;
+    font-size: 18px;
+    font-weight: 600;
+    margin:0 0 0 10px
+}
+
+
+
+
+
+.todoItemChecked {
+    text-decoration: line-through;
+}
+
+
+.todoList {
+    width: 70%;
+}
+
+.todoList li {
+  background:white;
+  border-radius:50px;
+  margin: 10px 0 0 0;
+  display: block;
+ padding: 15px;
+ border: 1px solid blue;
+
+}
+
+.deleteButton {
+    background:red;
+    width: 140px;
+    padding: 10px;
+    border-radius:50px;
+    border:none;
+    font-size: 20px;
+    color:white;
+    font-weight: 600;
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    
+
+}
+
+.deleteButton:hover {
+    cursor: pointer;
+}
+
+.todoElement {
+    position: relative;
+}
+

@@ -1,6 +1,17 @@
 const _inputPassword = document.querySelector(".js--input-password");
 const _form = document.querySelector(".js--form");
-const _btn = document.querySelector(".btn");
+const _btn = document.querySelector(".js--btn");
+const _img_wrap = document.querySelector(".js--img_wrap ");
+
+_form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  clearValidationMessages();
+  validatePassword();
+});
+
+_img_wrap.addEventListener("click", () => {
+  showPassword();
+});
 
 function createValidationMessages() {
   const errorMessages = {
@@ -20,16 +31,9 @@ function createValidationMessages() {
     validationMessages[key] = message;
     validationMessages[key].style.display = "block";
   }
-
   return validationMessages;
 }
 const validationMessages = createValidationMessages();
-_form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  clearValidationMessages();
-  validatePassword();
-  clearInputField();
-});
 
 function validatePassword() {
   const password = _inputPassword.value;
@@ -67,7 +71,6 @@ function validatePassword() {
   } else {
     hideErrorMessage("length");
   }
-
   return isValid;
 }
 
@@ -85,6 +88,10 @@ function clearValidationMessages() {
   }
 }
 
-function clearInputField() {
-  _inputPassword.value = "";
+function showPassword() {
+  if (_inputPassword.type === "password") {
+    _inputPassword.type = "text";
+  } else {
+    _inputPassword.type = "password";
+  }
 }

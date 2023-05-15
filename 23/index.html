@@ -7,25 +7,18 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Costructor</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form class="js--form">
-      <label
-        >Type your password
-        <input
-          class="js--input-password"
-          type="password"
-          name="password"
-          placeholder="password"
-          required
-        />
-      </label>
-      <div class="js--img_wrap img_wrap"></div>
-      <button class="js--btn btn" type="submit">OK</button>
-    </form>
-
+    <div class="wrapper">
+      <form>
+        <input class="js--id-input id_input" />
+        <button class="js--search-btn search_btn">Пошук</button>
+        <div class="js--post-container"></div>
+        <div class="js--comments-container comments"></div>
+      </form>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

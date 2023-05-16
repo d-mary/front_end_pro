@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Star Wars API Interface</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Star Wars API Interface</h1>
+    <form action="https://swapi.dev/api" class="js--form">
+      <label for="endpointInput">Endpoint:</label>
+      <input type="text" class="js--endpointInput endpointInput"
+      placeholder="Enter API endpoint" name:"url" />
+      <button type="submit" class="js--btn">Get Data</button>
+    </form>
+    <div class="js--loader loader hidden"></div>
+    <div class="js--resultContainer resultContainer">
+      <h2>Result</h2>
+      <div class="js--idContainer idContainer"></div>
+      <div class="js--controllerContainer controllerContainer"></div>
+      <pre class="js--result result"></pre>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

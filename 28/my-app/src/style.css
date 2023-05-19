@@ -1,0 +1,92 @@
+
+body {
+    background:rgba(0, 0, 0, 0.819)
+}
+.container {
+    width: 600px;
+    margin: 0 auto;
+    background:rgba(255, 255, 255, 0.871);
+    border-radius: 50px;
+    padding: 15px;
+    position: relative;
+  
+}
+
+h1, h3 {
+    text-align: center;
+    font-size: 26px;
+    color:rgb(13, 13, 176);
+    font-weight: 700;
+}
+
+ul.nav {
+    border-right:1px solid darkblue;
+    border-top: 1px solid darkblue;
+    border-bottom: 1px solid darkblue;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    left:0;
+    top:30%;
+    width:100px;
+    padding: 35px 15px 35px 25px;
+}
+ul.nav li {
+    padding: 0 0 10px 0;
+    font-size: 20px;
+}
+
+main p, footer p{
+    padding: 0 0 0 150px;
+    text-indent: 20px;
+}
+
+.first_item {
+    color: red
+}
+
+.second_item {
+    color:blue
+}
+.third_item {
+    color: fuchsia
+}
+.forth_item {
+    color: green
+}
+
+.media li {
+    color:black;
+    border-radius: 50%;
+    
+    width: 64px;
+    height: 64px;
+}
+
+ul.media {
+    display: flex;
+    list-style-type:none;
+  justify-content: center;
+
+    
+}
+
+ul.media a:first-child {
+ 
+        background: url('./img/css_sprites.png') -10px -10px;
+        
+}
+
+ul.media a:nth-child(2){
+background: url('./img/css_sprites.png') -94px -10px;
+
+}
+
+ul.media a:last-child {
+ 
+    background: url('./img/css_sprites.png') -10px -94px;
+   
+}
+a {
+    text-decoration: none;
+}

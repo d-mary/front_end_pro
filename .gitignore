@@ -2,4 +2,6 @@
 22/node_modules/
 24/gulp/node_modules/
 24/gulp/dist/
+25/node_modules/
+25/dist/
 28/my-app/node_modules/

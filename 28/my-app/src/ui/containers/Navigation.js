@@ -1,15 +1,20 @@
 import React from "react";
-import { Li } from "../components/Li_item";
+import Link from "../components/Link";
 
 export class Navigation extends React.Component {
   render() {
     return (
       <nav>
         <ul className="nav">
-          <Li text="Header"></Li>
-          <Li text="First section" customClass="second_item"></Li>
-          <Li text="Second section" customClass="third_item"></Li>
-          <Li text="Footer" customClass="forth_item"></Li>
+          <li>
+            <Link to="#">Main</Link>
+          </li>
+          <li>
+            <Link to="#">About</Link>
+          </li>
+          <li>
+            <Link to="#">Contacts</Link>
+          </li>
         </ul>
       </nav>
     );

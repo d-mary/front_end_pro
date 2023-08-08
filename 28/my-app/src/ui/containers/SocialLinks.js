@@ -1,13 +1,13 @@
 import React from "react";
-import { Li } from "../components/Li_item";
+import Link from "../components/Link";
 
 export class SocialLinks extends React.Component {
   render() {
     return (
       <ul className="media">
-        <Li customClass="media"></Li>
-        <Li customClass="media"></Li>
-        <Li customClass="media"></Li>
+        <Link customClass="media"></Link>
+        <Link customClass="media"></Link>
+        <Link customClass="media"></Link>
       </ul>
     );
   }
